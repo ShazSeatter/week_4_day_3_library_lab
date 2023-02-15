@@ -2,10 +2,22 @@
 
 {% block content %}
 
-{% for book in all_books%}
+{% for book in all_books %}
       {{book.title}}
+      <br>
       {{book.genre}}
+      <br>
       {{book.publisher}}
-      {{book.author.first_name}}
+      <br>
+      {{book.author.first_name}} {{book.author.last_name}}
+      
+      <div class="buttons">
+        <form class="delete-form" action="/books/{{ book.id }}/delete" method="POST">
+          <button class="trash-button">
+            <i class="fa fa-trash-o fa-3x" style="color: red"></i>
+          </button>
+        </form>
+      </div>
+    <hr>
   {% endfor %}
 {% endblock %}
