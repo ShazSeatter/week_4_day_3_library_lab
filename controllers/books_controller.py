@@ -22,7 +22,6 @@ def books():
 
 
 
-
 # CREATE
 # POST '/tasks'
 # Receieve the data from the form, and put new entry into database
