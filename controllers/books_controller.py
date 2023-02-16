@@ -21,9 +21,12 @@ def books():
 # Return HTML form to the browser for us to fill in 
 
 
+
+
 # CREATE
 # POST '/tasks'
 # Receieve the data from the form, and put new entry into database
+
 
 
 # SHOW
@@ -43,7 +46,6 @@ def books():
 
 # DELETE
 # POST '/tasks/<id>'
-
 @books_blueprint.route('/books/<id>/delete', methods=["POST"])
 def delete_book(id):
     book_repository.delete(id)
